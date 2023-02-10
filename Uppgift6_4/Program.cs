@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace uppgift6_4
 {
@@ -6,12 +6,14 @@ namespace uppgift6_4
     {
         static void Main(string[] args)
         {
-            upphöjd(2);
+            Console.WriteLine("Skriv ner nummert");
+            int nummer = int.Parse(Console.ReadLine());
+            upphöjd(nummer);
         }
         static void upphöjd(int tal)
         {
             tal = tal * tal;
-            Console.WriteLine("Den resultat är: " +tal+ ".");
+            Console.WriteLine("Den resultat är: " + tal + ".");
         }
     }
 }
