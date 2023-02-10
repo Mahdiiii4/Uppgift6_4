@@ -1,31 +1,18 @@
 using System;
-using System.Data.Common;
-
-namespace uppgift6_2
+namespace uppgift6_4
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Skriv ner var en nummer på var sin rad");
+            Console.WriteLine("Skriv ner nummert");
             int nummer = int.Parse(Console.ReadLine());
-            int nummer2 = int.Parse(Console.ReadLine());
-            Störst(nummer, nummer2);
+            upphöjd(nummer);
         }
-        static void Störst(int tal1, int tal2)
+        static void upphöjd(int tal)
         {
-            if (tal1 > tal2)
-            {
-                Console.WriteLine("Den största talen är" + tal1 + ".");
-            }
-            else if (tal1 < tal2)
-            {
-                Console.WriteLine("Den största talen är" + tal2 + ".");
-            }
-            else if (tal1 == tal2)
-            {
-                Console.WriteLine("De är lika stora");
-            }
+            tal = tal * tal;
+            Console.WriteLine("Den resultat är: " + tal + ".");
         }
     }
 }
