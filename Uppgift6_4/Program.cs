@@ -5,13 +5,20 @@ namespace uppgift6_4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Skriv ner nummert");
+            Console.WriteLine("Skriv ner nummert och potensen. skriv först nummert och sen potensen. Var en på sin rad");
+            Console.Write("Nummer: ");
             int nummer = int.Parse(Console.ReadLine());
-            upphöjd(nummer);
+            Console.Write("potens: ");
+            int potens = int.Parse(Console.ReadLine());
+            upphöjd(nummer, potens);
         }
-        static void upphöjd(int tal)
+        static void upphöjd(int tal, int tal2)
         {
-            tal = tal * tal;
+            for(int i = 0; i < tal2-1; i++)
+            {
+                tal = tal * tal;
+            }
+
             Console.WriteLine("Den resultat är: " + tal + ".");
         }
     }
